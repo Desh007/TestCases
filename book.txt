@@ -1,0 +1,142 @@
+#include<iostream>
+#include <string.h>
+#include<stdlib.h>
+
+using namespace std;
+
+
+class shop
+{
+ char auther[20],title[20],publisher[30];
+ int price,no_of_copies;
+ public:
+
+
+      int ch,cost,amt;
+     char t[10],a[10];
+     void getdata();
+     void disp();
+     void accept_book_info();
+     void display_book_status();
+
+
+
+};
+void shop::getdata()
+{
+    cout<<"\nenter the title";
+cin>>title;
+cout<<"\nenter the auther";
+cin>>auther;
+cout<<"\nenter the publisher";
+cin>>publisher;
+cout<<"\nenter the price";
+cin>>price;
+cout<<"\nenter the no_of_copies";
+cin>>no_of_copies;
+}
+
+
+void shop::accept_book_info()
+{
+    int i;
+cout<<"\nEnter book title and author and amt : ";
+     cin>>t>>a>>amt;
+
+    {
+
+     if((strcmp(t,title))==0 && (strcmp(a,auther))==0 && (amt<=no_of_copies))
+		{
+		    cout<<"\nBook is  not in stock";
+		}
+
+       else{
+                cout<<"\nBook is available\n";
+                cost=amt*price;
+    cout<<"cost="<<cost;
+
+}
+		}
+
+
+ /*   for(i=0;i<2;i++)
+
+    {
+
+    if(sarr[i].title==t && amt<=sarr[i].no_of_copies)
+
+     {
+        cout<<"\nBook is available.";
+}
+    else
+    {
+
+        cout<<"\nSorry Copies are not available";}
+
+    }
+}*/
+
+ }
+
+
+
+void shop::display_book_status()
+{
+
+}
+int main()
+{
+int ans;
+shop s;
+shop sarr[2];
+int i;
+for (i=0;i<2;i++)
+{
+    sarr[2].getdata();
+}
+
+/*do
+{
+
+        s.accept_book_info();
+     cout<<"do u want to purchase (yes or no): ";
+     cin>>ans;
+}while(ans=="y"); */
+s.accept_book_info();
+cout<<"do u want to purchase (yes =1): ";
+cin>>ans;
+while(ans=1)     {
+       s.accept_book_info();
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
